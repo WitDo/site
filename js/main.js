@@ -107,7 +107,7 @@ function main() {
 		    }
 
 		    //调用
-		    CanvasParticle(config);
+		   // CanvasParticle(config);
 
         var $container = $('#lightbox');
         $container.isotope({

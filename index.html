@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="">
-
+<title>维特度科技-Home</title>
+<meta name="description" content="维特度致力于在大数据、云计算技术、区块连、人工智能、智能芯片领域的创新和研究,在成熟的大数据、云计算大环境下，维特度将结合5G通讯、人工智能、区块链等技术提供智能家居、车联网、物联网方案。">
+<meta name="keywords" content="大数据,云计算,区块连,人工智能,深度学习,智能芯片,芯片,SoC,5G通讯,智能家居,车联网,物联网,Witdo,Deepit,Deeploy,DocStack,Nyx,Docker,Kubernetes,RISC,RISC-V,Istio,Service Mesh,FPGA,eFPGA,fabric,bitcoin">
+<meta name="author" content="Jermine , Alice">
+<link rel="shortcut icon" href="favicon.ico" />
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.4.6.0.css">
@@ -22,6 +22,8 @@
 ================================================== -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
 
 
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -90,8 +92,8 @@
 			<div class="col-md-6">
 				<div class="about-text">
 					<div class="section-title">
-						<h4>关于我们</h4>
-						<h2> <strong>关于我们</strong>的一些概述</h2>
+						<h4></h4>
+						<h2> <strong>关于我们</strong></h2>
 						<hr>
 						<div class="clearfix"></div>
 					</div>
@@ -99,20 +101,117 @@
 					<ul class="about-list">
 						<li>
 							<span class="fa fa-dot-circle-o"></span>
-							<strong>目标</strong> - <em>我们提供独特性和质量</em>
+							<strong>目标</strong> - <em>采用人工智能打造智能物联网解决方案。</em>
 						</li>
 						<li>
 							<span class="fa fa-dot-circle-o"></span>
-							<strong>服务</strong> - <em>提供快速和良好的结果</em>
+							<strong>服务</strong> - <em>以用户业务场景为基准实施定制化的解决方案。</em>
 						</li>
 						<li>
 							<span class="fa fa-dot-circle-o"></span>
-							<strong>理念</strong> - <em>独特的创新</em>
+							<strong>理念</strong> - <em>与时俱进，勇于创新，紧跟时代发展，不忘初心。</em>
+						</li>
+						<li>
+							<span class="fa fa-dot-circle-o"></span>
+							<strong>价值观</strong> - <em>诚信高效-团结创新-拼搏务实-超越自我-追求卓越-乐于分享。</em>
+						</li>
+						<li>
+							<span class="fa fa-dot-circle-o"></span>
+							<strong>定位</strong> - <em>卓尔不群 （Wit Do Different）</em>
 						</li>
 					</ul>
+
+
 				</div>
 			</div>
 		</div>
+
+		<br><br><br>
+
+	<div class="row">
+		<div class="section-title">
+			<h4></h4>
+			<h2> <strong>维特度的技术栈介绍</strong></h2>
+			<hr>
+			<div class="clearfix"></div>
+		</div>
+		<p class="intro"></p>
+		
+		<div class="mume markdown-preview">
+  
+	  <h5 class="mume-header" id="%E5%85%B3%E4%BA%8E%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E6%9E%B6%E6%9E%84">关于基础设施架构：</h5>
+	  
+	  <ol>
+	  <li>使用docker容器技术部署我们的应用和组件；</li>
+	  <li> 进程管理工具采用Runit</li>
+	  <li>对于容器的编排和调度工具采用 Kubernetes；</li>
+	  <li>对于深度学习中的4大主流框架（Tensorflow、Mxnet、Pytorch、Caffe/Caffe2）已经封装成基础镜像，通过Nvidia Docker 和Kubernetes的插件可以非常方便的在容器中构造一个完善的训练环境或运行环境，这样就可以通过容器技术的轻量化虚拟技术实现环境隔离进程隔离，从而完美解决了裸机下对不同软件、同一软件版本、不同版本驱动等一系列的环境问题，为开发人员和运维人员解决了基础环境的问题，这样就节约了大量的配置环境的时间，只需要关注业务实现即可，因此可以加速产品的迭代效率，为后续的工作赢得更多时间；</li>
+	  <li>Docker仓库采用Vmware的企业级开源产品Harbor；</li>
+	  <li>关于Kubernetes的部署和升级采用helm和operator进行简化，使用Git仓库作为helm的chart管理能很好的做包的版本控制；</li>
+	  <li>实现了K8s调度GPU节点和容器内调用GPU计算；</li>
+	  <li>私有Git仓库采用Gitea搭建；</li>
+	  <li>实时视频流rtmp、hls服务器采用srs作为服务端，客户端采用深度学习框架+opencv+ffmpeg进行处理，并输出到srs服务器，实现对视频的实时处理；</li>
+	  <li>k8s的性能监控采用普罗米修斯等工具，图形化用grafana；</li>
+	  <li>日志收集和处理，以及监控和预警  ，采用EFK系统进行处理；（Elasticsearch、Fluentd、Kibana）；</li>
+	  <li>所有项目的应用程序实现分布式高可用架构（可以选择微服务架构（实现Service Mesh的Istio），通过消息队列实现程序间解耦，protobuf作为序列化，grpc作为调用协议）；</li>
+	  <li>分布式存储系统采用Ceph，为k8s提供持久化支持与海量存储；</li>
+	  <li>分布式Redis的集群方案 采用codis 或者pika实现 ；</li>
+	  <li>RDB的方案采用Newsql实现的 cockroach 或tidb；</li>
+	  <li>通过k8s实现RabbitMQ集群，用于分布式消息队列；</li>
+	  <li>用户管理采用openLDAP实现对用户的统一管理，避免每套系统重新录入用户的重复工作；</li>
+	  </ol>
+	  <h5 class="mume-header">关于代码质量：</h5>
+	  
+	  <ol>
+	  <li>Git flow约定代码管理流程；</li>
+	  <li>采用Gerrit做Code Review；</li>
+	  <li>采用Sonarqube作为代码的静态分析工具；</li>
+	  <li>Jenkins multibranch pipeline作为CI的创建类型，方便对不通分支的代码进行测试和构建，保证不通分支的代码质量；</li>
+	  </ol>
+	  <h5 class="mume-header" >关于CI/CD的工作：</h5>
+	  
+	  <ol>
+	  <li>CI/CD的工具我们采用Jenkins，因其插件多、开源、使用广泛方便；</li>
+	  <li>采用MulitBrach Pipeline + Jenkinsfile进行构建流水线的配置，这样做的好处就是更加灵活并且支持多分枝构建，根据需要可以通过Groovy定制自己的流程，如果流水线有变动的话只需要改动项目目录下的Jenkinsfile即可触发并且改变相应构建流程，对于流水线的控制，不但快而且可以准确把控；</li>
+	  <li>对于Pipeline的stage根据需求加入IM通知，由于我们工作流采用Dingtalk，所以就会将Jenkins的构建信息推送到钉钉工作组，方便不通阶段通知不同群组的人，至于为什么不用Slack，BarryChat、Email等，因为Dingtalk足够实现消息通知，不需要再增加额外工具,少即是多。不用Email 是因为没有即时工具及时，而且不能即时与相关人员在线讨论，沟通起来太繁琐，IM工具可以很直观简洁的表达；</li>
+	  <li>关于CI/CD流程：用户本地git review后提交代码   -&gt;  提交到Gerrit库  -&gt; 执行Sonarqube对代码进行静态分析（从源码就开始注重代码质量） -&gt;  触发Jenkins自动测试, 测试通过标记为Verified  -&gt;  人工审核Review，review通过  -&gt; Gerrit执行Replication  -&gt;   push Git remote -&gt; 触发远程仓库下的Jenkins Pipeline-&gt;Build docker image -&gt; Push Docker image to Harbor -&gt; Deploy to test environment  for test from Harbor -&gt; Run E2E test -&gt; 将结果通知给当前代码分支的负责人（架构师、测试经理或发布人员等）-&gt;管理员将代码merrage到 release 分支-&gt; 进过充分测试和准备后由管理人员合并到Master 分支-&gt;触发发布程序（调用K8s的API进行发布，让程序灰度到生产） ；</li>
+	  </ol>
+	  <h5 class="mume-header">关于深度学习：</h5>
+	  
+	  <ol>
+	  <li>对于深度学习方面借助k8s通过大数据（spark、storm等工具）和机器学习框架实现分布式训练，加快训练速度，加强通过海量数据训练大模型的能力；</li>
+	  <li>通过模型转换技术将训练的算法模型部署到嵌入式设备（主要是移动设备arm架构硬件），实现移动设备的智能化；</li>
+	  <li>嵌入式领域采用FPGA来加速我们的算法模型，MCU采用先进开源的RISC-V指令集进行处理器的设计，在AI和IoT将发挥巨大优势</li>
+	  </ol>
+
+	  <h5 class="mume-header">关于开发语言：</h5>
+	  
+	  <ol>
+	  <li>微服务和高并发场景采用golang或者rust进行编写，因为他们特别适合通过docker实现微服务架构，充分体现灵活性和扩展性以及高性能；</li>
+	  <li>在Witdo的新产品中将采用RISC-V作为专用硬件的架构，Chisel作为硬件设计语言； </li>
+	  <li>嵌入式开发首选Rust，因为它更安全在语言层面解决了很多C/C++ 一直存在却很难避免的问题，比如指针问题和运行时的一些问题；</li>
+	  <li>RISC-V + Rust 在Witdo将成最佳组合,Rust和RISC-V都是在没有历史包袱，并且建立在各子行业几十年踩坑经验之上的，避免了很多坑，优化了很多地方，所以既然都是新的开源项目何不在写新的项目时用rust呢?至于以前的c，c++代码，rust可以通过binding去调用，新的核心代码完全可以用rust。</li>
+	  <li>快速原型或者对性能要求不算高，可以用python进行快速实现；</li>
+	  <li>在区块连开发上结合需求首选golang进行开发，对性能要求比较的地方改用Rust，尽量避免使用c/C++</li>
+	  </ol>
+
+	  <h5 class="mume-header" >关于DevOps的分享文化：</h5>
+	  
+	  <ol>
+	  <li>创建内部分享组织Sharemix </li>
+	  <li>定期会准备分享清单，根据大家的投票确定分享主题和Sharemixer ；</li>
+	  <li>用于企业内部的DocStack可以满足公司内部文档和技术文档分享，并已经开源，后期会继续维护；</li>
+	  <li>文件分享采用Nextcloud方案；</li>
+	  </ol>
+	</div>
+
+
+
+
+	</div>
+
+
+
 	</div>
 </div>
 
@@ -133,9 +232,9 @@
 					<div class="thumbnail">
 						<img src="img/team/01.jpg" alt="..." class="img-circle team-img">
 						<div class="caption">
-							<h3>Jermine</h3>
+							<h3>胡旭 (Jermine Hu)</h3>
 							<p>CEO / 创始人</p>
-							<p>不寻求改变之前。寻求创造没有。.</p>
+							<p>不寻求改变之前，寻求创造没有。</p>
 						</div>
 					</div>
 				</div>
@@ -144,9 +243,9 @@
 					<div class="thumbnail">
 						<img src="img/team/02.jpg" alt="..." class="img-circle team-img">
 						<div class="caption">
-							<h3>Jermine</h3>
-							<p>CEO / 创始人</p>
-							<p>不寻求改变之前。寻求创造没有。.</p>
+							<h3>吴梦竹 (Alice Wu)</h3>
+							<p>前端负责人</p>
+							<p>书不记，熟读可记；义不精，细思可精；惟有志不立，直是无着力处。</p>
 						</div>
 					</div>
 				</div>
@@ -156,7 +255,7 @@
 						<img src="img/team/03.jpg" alt="..." class="img-circle team-img">
 						<div class="caption">
 							<h3>Jermine</h3>
-							<p>CEO / 创始人</p>
+							<p>CMO / 创始人</p>
 							<p>不寻求改变之前。寻求创造没有。.</p>
 						</div>
 					</div>
@@ -168,7 +267,7 @@
 						<div class="caption">
 							<h3>Jermine</h3>
 							<p>CEO / 创始人</p>
-							<p>不寻求改变之前。寻求创造没有。.</p>
+							<p>不</p>
 						</div>
 					</div>
 				</div>
@@ -320,15 +419,23 @@
 						<hr>
 					</div>
 					<div class="clearfix"></div>
-					<small><em>一些废话，比如我们会认真对待每一位提交的用户等
-					一些废话，比如我们会认真对待每一位提交的用户等
-					一些废话，比如我们会认真对待每一位提交的用户等
-					一些废话，比如我们会认真对待每一位提交的用户等
-					一些废话，比如我们会认真对待每一位提交的用户等
-					一些废话，比如我们会认真对待每一位提交的用户等</em></small>            
+					<small><em>如果存在合作机会可以随时与我们取得联系，可以通过E-mail或者在线填写表单。</em></small>  
+
+					
+<p>如果存在合作机会可以随时与我们取得联系，可以通过E-mail或者在线填写表单。</p>
+
+<p>地址： 江苏省南京市玄武区玄武大道699-22号</p>
+
+<p>邮箱：jermine@witdo.net</p>
+
+<p>Address：Xuanwu Street No.699-22,Xuanwu District,NanJing</p>
+
+<p>Email : jermine@witdo.net</p>
+
+
 				</div>
 
-				<form>
+				<!-- <form>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
@@ -349,7 +456,9 @@
 					</div>
 					
 					<button type="submit" class="btn tf-btn btn-default">提交</button>
-				</form>
+				</form> -->
+
+				<iframe height="671" allowTransparency="true" frameborder="0" scrolling="no"style="width:100%;border:none"src="http://jsform3.com/web/formembed/5b32f54e75a03c44d45b76b0"></iframe>
 
 			</div>
 		</div>
@@ -360,7 +469,7 @@
 <nav id="footer">
 	<div class="container">
 		<div class="pull-left fnav">
-			<p>Copyright &copy; 2016.Company name All rights reserved.</p>
+			<p>Copyright &copy; 2018.Company name All rights reserved.</p>
 		</div>
 		<div class="pull-right fnav">
 			<ul class="footer-social">
@@ -368,12 +477,13 @@
 				<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274038657'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274038657%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-<script src="js/jquery.1.11.1.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/SmoothScroll.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
@@ -381,6 +491,5 @@
 <script type="text/javascript" src="js/banner.js" ></script>
 <!--<script type="text/javascript" src="js/canvas-particle.js.js" ></script>-->
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274038657'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274038657%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>
